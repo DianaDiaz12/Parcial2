@@ -149,7 +149,7 @@ public class Crearcuenta extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-         UsuarioInicio usuario = new UsuarioInicio();
+        UsuarioInicio usuario = new UsuarioInicio();
         usuario.setVisible(true);
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
@@ -187,7 +187,6 @@ public class Crearcuenta extends javax.swing.JFrame {
 //            }
 //        });
 //    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> BoxSucursal;
     private javax.swing.JToggleButton btnCuentaCreada;

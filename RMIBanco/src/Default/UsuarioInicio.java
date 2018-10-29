@@ -110,7 +110,7 @@ public class UsuarioInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_btnModificarCuentaActionPerformed
 
     private void btnAbrirCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirCuentaActionPerformed
-         Crearcuenta usuario = new Crearcuenta();
+        Crearcuenta usuario = new Crearcuenta();
         usuario.setVisible(true);
     }//GEN-LAST:event_btnAbrirCuentaActionPerformed
 
@@ -148,7 +148,6 @@ public class UsuarioInicio extends javax.swing.JFrame {
 //            }
 //        });
 //    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton btnAbrirCuenta;
     private javax.swing.JToggleButton btnAdicionarDinero;

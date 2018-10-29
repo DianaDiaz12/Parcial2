@@ -1,4 +1,3 @@
-
 package Default;
 
 /**
@@ -6,6 +5,7 @@ package Default;
  * @author ACER
  */
 public class Usuario {
+
     private String nombrecompleto;
     private int idTipoIdentificacion;
     private int numeroIdentificacion;
@@ -19,9 +19,9 @@ public class Usuario {
         this.IdRol = IdRol;
         this.contraseña = contraseña;
     }
-    
-    public String crearUsuario(){
-        
+
+    public String crearUsuario() {
+
         return null;
     }
 
@@ -64,6 +64,5 @@ public class Usuario {
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
     }
-    
-    
+
 }

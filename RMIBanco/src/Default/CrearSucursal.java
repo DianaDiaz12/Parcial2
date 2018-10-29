@@ -22,8 +22,10 @@ public class CrearSucursal extends javax.swing.JFrame {
     /**
      * Creates new form AdminInicio
      */
-     public CrearSucursal() {
+    public CrearSucursal() {
         initComponents();
+        Banco b = new Banco();
+        b.buscarCiudad(BoxCiudad);
     }
 
     /**
@@ -39,7 +41,7 @@ public class CrearSucursal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         BoxCiudad = new javax.swing.JComboBox<>();
-        txtNombreCompleto = new javax.swing.JTextField();
+        txtNombreSucursal = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,16 +56,15 @@ public class CrearSucursal extends javax.swing.JFrame {
 
         jLabel3.setText("Ciudad");
 
-        BoxCiudad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         BoxCiudad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BoxCiudadActionPerformed(evt);
             }
         });
 
-        txtNombreCompleto.addActionListener(new java.awt.event.ActionListener() {
+        txtNombreSucursal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombreCompletoActionPerformed(evt);
+                txtNombreSucursalActionPerformed(evt);
             }
         });
 
@@ -80,10 +81,10 @@ public class CrearSucursal extends javax.swing.JFrame {
                         .addGap(17, 17, 17)
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BoxCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNombreCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnCrearUsuario))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtNombreSucursal, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
+                            .addComponent(btnCrearUsuario)
+                            .addComponent(BoxCiudad, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -92,7 +93,7 @@ public class CrearSucursal extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txtNombreCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNombreSucursal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BoxCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -105,35 +106,17 @@ public class CrearSucursal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNombreCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreCompletoActionPerformed
+    private void txtNombreSucursalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreSucursalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombreCompletoActionPerformed
+    }//GEN-LAST:event_txtNombreSucursalActionPerformed
 
     private void BoxCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoxCiudadActionPerformed
-        try {
-            String sql = "";
-            Conexion cc = new Conexion();
-            Connection cn = cc.conectarMySQL();
-            sql = "SELECT id, nombre FROM cuidad";
-            String[] datos = new String[10];
-            Statement st = cn.createStatement();
-            ResultSet rs = st.executeQuery(sql);
-            BoxCiudad.addItem("Seleccione una opción");
-            while (rs.next()) {
-                BoxCiudad.addItem(rs.getString("nombre"));
-            }
-            st.close();
-            rs.close();
-        } catch (SQLException ex) {
-            Logger.getLogger(CrearSucursal.class.getName()).log(Level.SEVERE, null, ex);
-        }
 
     }//GEN-LAST:event_BoxCiudadActionPerformed
 
     private void btnCrearUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearUsuarioActionPerformed
-        
-        
-        
+        Banco b = new Banco();
+        b.crearSucursal(txtNombreSucursal.getText(), (String) BoxCiudad.getModel().getSelectedItem());
     }//GEN-LAST:event_btnCrearUsuarioActionPerformed
 //
     //    /**
@@ -176,6 +159,6 @@ public class CrearSucursal extends javax.swing.JFrame {
     private javax.swing.JToggleButton btnCrearUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField txtNombreCompleto;
+    private javax.swing.JTextField txtNombreSucursal;
     // End of variables declaration//GEN-END:variables
 }
