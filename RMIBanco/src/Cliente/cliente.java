@@ -1,7 +1,7 @@
 package Cliente;
 
 import Default.Conexion;
-import Default.LoginAdmin;
+import Default.CrearSucursal;
 import java.sql.Connection;
 
 public class cliente {
@@ -10,7 +10,7 @@ public class cliente {
         Conexion conn = new Conexion();
         Connection reg= conn.conectarMySQL();
         
-        LoginAdmin obj = new LoginAdmin();
+        CrearSucursal obj = new CrearSucursal();
         obj.setVisible(true);
     }
 }
