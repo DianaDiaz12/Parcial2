@@ -5,12 +5,12 @@
  */
 package Cliente;
 
-import Default.AdminInicio;
-import Default.AdminInicio;
-import Default.Conexion;
-import Default.Conexion;
-import Default.UsuarioInicio;
-import Default.UsuarioInicio;
+import Vistas.AdminInicio;
+import Vistas.AdminInicio;
+import Servidor.Conexion;
+import Servidor.Conexion;
+import Vistas.UsuarioInicio;
+import Vistas.UsuarioInicio;
 import Interface.Interface;
 import java.sql.SQLException;
 import java.util.logging.Level;

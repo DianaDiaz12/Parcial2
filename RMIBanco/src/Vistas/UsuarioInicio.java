@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Default;
+package Vistas;
 
 /**
  *
@@ -27,8 +27,6 @@ public class UsuarioInicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnAbrirCuenta = new javax.swing.JToggleButton();
-        btnModificarCuenta = new javax.swing.JToggleButton();
         btnAdicionarDinero = new javax.swing.JToggleButton();
         btnRetirarDinero = new javax.swing.JToggleButton();
         btnConsultarSaldo = new javax.swing.JToggleButton();
@@ -36,21 +34,12 @@ public class UsuarioInicio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnAbrirCuenta.setText("Crear  Cuenta Bancaria");
-        btnAbrirCuenta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAbrirCuentaActionPerformed(evt);
-            }
-        });
-
-        btnModificarCuenta.setText("Modificar Cuenta");
-        btnModificarCuenta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnModificarCuentaActionPerformed(evt);
-            }
-        });
-
         btnAdicionarDinero.setText("Adicionar Dinero");
+        btnAdicionarDinero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdicionarDineroActionPerformed(evt);
+            }
+        });
 
         btnRetirarDinero.setText("Retirar Dinero");
 
@@ -68,51 +57,34 @@ public class UsuarioInicio extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(0, 21, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnAdicionarDinero)
-                                    .addComponent(btnAbrirCuenta))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnModificarCuenta)))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnRetirarDinero)
-                            .addComponent(btnConsultarSaldo))
-                        .addGap(50, 50, 50))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btnRetirarDinero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnAdicionarDinero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnConsultarSaldo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(175, 175, 175))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(9, 9, 9)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnRetirarDinero, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnAbrirCuenta))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(btnModificarCuenta)
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAdicionarDinero)
-                    .addComponent(btnConsultarSaldo))
-                .addGap(37, 37, 37))
+                .addGap(13, 13, 13)
+                .addComponent(btnAdicionarDinero)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnRetirarDinero)
+                .addGap(18, 18, 18)
+                .addComponent(btnConsultarSaldo)
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnModificarCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarCuentaActionPerformed
+    private void btnAdicionarDineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarDineroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnModificarCuentaActionPerformed
-
-    private void btnAbrirCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirCuentaActionPerformed
-        Crearcuenta usuario = new Crearcuenta();
-        usuario.setVisible(true);
-    }//GEN-LAST:event_btnAbrirCuentaActionPerformed
+    }//GEN-LAST:event_btnAdicionarDineroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,10 +121,8 @@ public class UsuarioInicio extends javax.swing.JFrame {
 //        });
 //    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton btnAbrirCuenta;
     private javax.swing.JToggleButton btnAdicionarDinero;
     private javax.swing.JToggleButton btnConsultarSaldo;
-    private javax.swing.JToggleButton btnModificarCuenta;
     private javax.swing.JToggleButton btnRetirarDinero;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables

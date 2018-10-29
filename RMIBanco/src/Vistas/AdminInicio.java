@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Default;
+package Vistas;
 
 /**
  *
@@ -45,6 +45,11 @@ public class AdminInicio extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnCrearUsuario.setText("Crear usuario");
+        btnCrearUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearUsuarioActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Nombre Completo");
 
@@ -161,6 +166,8 @@ public class AdminInicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSucursalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSucursalActionPerformed
+
+
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSucursalActionPerformed
 
@@ -171,6 +178,10 @@ public class AdminInicio extends javax.swing.JFrame {
     private void txtNumIdentificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumIdentificacionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNumIdentificacionActionPerformed
+
+    private void btnCrearUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCrearUsuarioActionPerformed
 //
 //    /**
 //     * @param args the command line arguments

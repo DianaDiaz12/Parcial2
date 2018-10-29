@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Default;
+package Vistas;
 
 /**
  *
@@ -54,6 +54,11 @@ public class Crearcuenta extends javax.swing.JFrame {
         jLabel5.setText("Cantidad Dinero a ingresar");
 
         btnCuentaCreada.setText("Crear  Cuenta");
+        btnCuentaCreada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCuentaCreadaActionPerformed(evt);
+            }
+        });
 
         txtNumeroCuenta.setText("jTextField1");
 
@@ -152,6 +157,10 @@ public class Crearcuenta extends javax.swing.JFrame {
         UsuarioInicio usuario = new UsuarioInicio();
         usuario.setVisible(true);
     }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void btnCuentaCreadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCuentaCreadaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCuentaCreadaActionPerformed
 
 //    /**
 //     * @param args the command line arguments

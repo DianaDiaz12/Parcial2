@@ -1,9 +1,8 @@
 package Servidor;
 
 import Cliente.LoginAdmin;
-import Default.AdminInicio;
-import Default.Conexion;
-import Default.UsuarioInicio;
+import Vistas.AdminInicio;
+import Vistas.UsuarioInicio;
 import Interface.Interface;
 import java.net.InetAddress;
 import java.rmi.RemoteException;
