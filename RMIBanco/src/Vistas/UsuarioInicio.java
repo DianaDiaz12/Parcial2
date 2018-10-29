@@ -84,6 +84,7 @@ public class UsuarioInicio extends javax.swing.JFrame {
 
     private void btnAdicionarDineroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarDineroActionPerformed
         // TODO add your handling code here:
+      
     }//GEN-LAST:event_btnAdicionarDineroActionPerformed
 
     /**

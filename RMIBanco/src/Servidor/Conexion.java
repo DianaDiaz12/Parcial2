@@ -22,6 +22,7 @@ public class Conexion {
     public String username = "root";
     public String password = "Happy123$";
     public String url = "jdbc:mysql://localhost:3306/bdrmi?autoReconnect=true&useSSL=false";
+    private int idUsuario;
 
     public Connection conectarMySQL() {
         conn = null;
@@ -58,6 +59,16 @@ public class Conexion {
                 datos[5] = rs.getString(6);
             }
         }
+
         return rol;
     }
+
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
 }

@@ -60,7 +60,27 @@ public class Banco {
             st.close();
             rs.close();
         } catch (SQLException ex) {
-            Logger.getLogger(CrearSucursal.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println(ex);
         }
     }
+
+    public int adicionarDinero(String numcuenta, int valor) {
+        try {
+            Conexion cc = new Conexion();
+            Connection cn = cc.conectarMySQL();
+            PreparedStatement pst = cn.prepareStatement("INSERT INTO sucursal (nombre, idcuidad) VALUES(?,?)");
+            pst.setString(1, numcuenta);
+            pst.setInt(2, valor);
+            int a = pst.executeUpdate();
+            if (a > 0) {
+                JOptionPane.showMessageDialog(null, "Registro exitoso");
+            } else {
+                JOptionPane.showMessageDialog(null, "Error al agregar");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return 0;
+    }
+
 }
